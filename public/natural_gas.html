@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Emissions Calculator</title>
+    <link rel="stylesheet" href="natural_gas.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Emissions Calculator</h1>
+        <form id="emissions-form">
+            <div class="question">
+                <p>Input Type:</p>
+                <label>
+                    <input type="radio" name="input-type" value="dollars"> Dollars
+                </label>
+                <label>
+                    <input type="radio" name="input-type" value="thousand-cubic-feet"> Thousand Cubic Feet
+                </label>
+                <label>
+                    <input type="radio" name="input-type" value="therms"> Therms
+                </label>
+            </div>
+
+            <div id="dollars-input" class="input-section">
+                <div class="question">
+                    <p>Enter average monthly gas bill in dollars:</p>
+                    <input type="number" name="gas-bill-dollars" step="any">
+                </div>
+                <div class="question">
+                    <p>Enter price per thousand cubic feet of natural gas:</p>
+                    <input type="number" name="price-per-thousand-cubic-feet" step="any">
+                </div>
+            </div>
+
+            <div id="thousand-cubic-feet-input" class="input-section">
+                <div class="question">
+                    <p>Enter average number of cubic feet consumed per month:</p>
+                    <input type="number" name="cubic-feet-consumed" step="any">
+                </div>
+            </div>
+
+            <div id="therms-input" class="input-section">
+                <div class="question">
+                    <p>Enter average number of therms consumed per month:</p>
+                    <input type="number" name="therms-consumed" step="any">
+                </div>
+            </div>
+
+            <div class="question">
+                <button type="button" id="calculate-button">Calculate Emissions</button>
+            </div>
+
+            <div id="result" class="result-section" style="display: none;">
+                <p>Calculated Emissions:</p>
+                <p id="emissions-result"></p>
+            </div>
+        </form>
+    </div>
+    <div class="question">
+        <button type="button" id="transportation">Calculate transportation carbon emission</button>
+        <button type="button" id="electricity">Calculate electricity emission</button>
+        <button type="button" id="waste">Calculate Waste carbon emission</button>
+
+    </div>
+</div>
+    <script src="natural_gas.js"></script>
+</body>
+</html>

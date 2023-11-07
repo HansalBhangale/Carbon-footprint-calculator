@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+   <link rel="stylesheet" href="login_page_css.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+   
+    <form id="login-form" action="/login"  method="POST">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <input type="hidden" id="redirect-url" name="redirect-url" value="radial_menu.html">
+        <button type="submit" class="btn">Login</button>
+    </form>
+    <div class="switch-btn">
+        Don't have an account? <a href="sigh_up.html">Sign Up</a>
+    </div>
+    <script src="login.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissions Calculator</title>
+    <link rel="stylesheet" href="transportation.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Emissions Calculator</h1>
+        <form id="emissions-form">
+            <div class="question">
+                <p>1. Do you want to calculate emissions? (Yes/No)</p>
+                <label>
+                    <input type="radio" name="calculate-emissions" value="yes"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="calculate-emissions" value="no"> No
+                </label>
+            </div>
+
+            <div id="vehicles-container">
+                
+            </div> 
+
+            <div class="question">
+                <button type="button" id="add-vehicle-button">Add Vehicle</button>
+                <button type="button" id="calculate-button" style="display: none;">Calculate</button>
+            </div>
+
+            <div class="question">
+                <p>Total CO2 Emissions:</p>
+                <input type="text" name="total-co2-emissions" readonly>
+            </div>
+        </form>
+        <div class="question">
+            <button type="button" id="electricity-button">Calculate Electricity carbon emission</button>
+            <button type="button" id="natural-gas-button">Calculate Natural Gas caarbon emission</button>
+            <button type="button" id="waste-button">Calculate Waste carbon emission</button>
+
+
+
+        </div>
+    </div>
+
+    <script src="transportation.js"></script>
+</body>
+</html>

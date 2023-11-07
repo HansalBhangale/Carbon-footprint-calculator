@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Waste Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="waste.css">
+</head>
+<body>
+    <h1>Waste Carbon Footprint Calculator</h1>
+    <form id="carbonForm">
+        <label for="organicWaste">How much organic waste (kg/year) does your household generate?</label>
+        <input type="number" id="organicWaste" name="organicWaste" required><br>
+
+        <label for="recycling">How much recyclable material (kg/year) does your household recycle?</label>
+        <input type="number" id="recycling" name="recycling" required><br>
+
+        <label for="disposableProducts">How much disposable products (kg/year) does your household use and dispose of?</label>
+        <input type="number" id="disposableProducts" name="disposableProducts" required><br>
+
+        <button type="button" onclick="calculateFootprint()">Calculate</button>
+    </form>
+
+    <h2>Waste-Related Carbon Footprint: <span id="result">N/A</span> kg CO2e/year</h2>
+    <div class="question">
+        <button type="button" id="transportation">Calculate transportation carbon emission</button>
+        <button type="button" id="electricity">Calculate electricity emission</button>
+        <button type="button" id="natural_gas">Calculate Natural_gas carbon emission</button>
+
+    </div>
+
+    <script src="waste.js"></script>
+</body>
+</html>

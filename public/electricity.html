@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Emissions Calculator</title>
+    <link rel="stylesheet" href="electricity.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Carbon Emissions Calculator</h1>
+        <div class="input-type">
+            <p>Choose Input Type:</p>
+            <label>
+                <input type="radio" name="input-type" value="dollars"> Dollars
+            </label>
+            <label>
+                <input type="radio" name="input-type" value="kwh"> kWh
+            </label>
+        </div>
+
+        <!-- Input form for dollars -->
+        <div id="dollars-input">
+            <h2>Calculate Emissions from Dollars</h2>
+            <div>
+                <label for="electric-bill">Average Monthly Electric Bill ($):</label>
+                <input type="number" id="electric-bill" step="any">
+            </div>
+            <div>
+                <label for="price-per-kwh">Price per kWh of Electricity ($):</label>
+                <input type="number" id="price-per-kwh" step="any">
+            </div>
+        </div>
+
+        <!-- Input form for kWh -->
+        <div id="kwh-input">
+            <h2>Calculate Emissions from kWh</h2>
+            <div>
+                <label for="kwh-consumed">Average Monthly kWh Consumed:</label>
+                <input type="number" id="kwh-consumed" step="any">
+            </div>
+        </div>
+
+        <button id="calculate-button">Calculate</button>
+
+        <div id="result" style="display: none;">
+            <h2>Calculated Emissions:</h2>
+            <p id="emissions-result"></p>
+        </div>
+    </div>
+    <div class="container">
+        <button type="button" id="transportation-button">Calculate Transportation carbon emission</button>
+        <button type="button" id="natural-gas-button">Calculate Natural Gas caarbon emission</button>
+        <button type="button" id="waste-button">Calculate Waste carbon emission</button>
+
+    </div>
+
+    <script src="electricity.js"></script>
+</body>
+</html>
