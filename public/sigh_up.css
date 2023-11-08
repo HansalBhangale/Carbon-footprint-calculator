@@ -12,7 +12,7 @@ body {
 .container {
     background-color:#b3d9b3;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
 }
@@ -22,15 +22,23 @@ h2 {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    margin-right: 10px;
 }
 
-
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #b3d9b3 ;
+}
 
 .btn {
     background-color: #007BFF;
