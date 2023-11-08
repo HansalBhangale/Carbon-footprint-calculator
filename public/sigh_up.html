@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width==device-width, initial-scale=1.0">   
     
-    <link rel="stylesheet" href="sigh_up.css">
-    
-    
-    
+    <link rel="stylesheet" href="sign_up.css">
+</head>
+<body>
     <div class="container" style="margin-top: 20px;">
         <h2>Sign Up</h2>
         <form id="sigh_up-form" action="/sighup" method="POST">
@@ -19,6 +18,10 @@
                 <label for="new-password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
             <button type="submit" class="btn">Sign Up</button>
         </form>
         <div class="switch-btn">
@@ -26,9 +29,5 @@
         </div>
     </div>
     <script src="sigh_up.js"></script>
-
-</head>
-<body>
-    
 </body>
 </html>
