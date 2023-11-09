@@ -7,16 +7,33 @@
 <body>
     <h1>Waste Carbon Footprint Calculator</h1>
     <form id="carbonForm">
-        <label for="organicWaste">How much organic waste (kg/year) does your household generate?</label>
-        <input type="number" id="organicWaste" name="organicWaste" required><br>
+        <label for="organicWaste">Organic Waste:</label>
+    <p>1. How many kilograms of food waste (e.g., fruit and vegetable scraps) do you discard annually?</p>
+    <input type="number" id="organicWaste" name="organicWaste">
 
-        <label for="recycling">How much recyclable material (kg/year) does your household recycle?</label>
-        <input type="number" id="recycling" name="recycling" required><br>
+    <label for="recycling">Recycling:</label>
+    <p>2. How many kilograms of recyclable materials (e.g., paper, plastic, glass) do you recycle annually?</p>
+    <input type="number" id="recycling" name="recycling">
 
-        <label for="disposableProducts">How much disposable products (kg/year) does your household use and dispose of?</label>
-        <input type="number" id="disposableProducts" name="disposableProducts" required><br>
+    <!-- New questions -->
 
-        <button type="button" onclick="calculateFootprint()">Calculate</button>
+    <p>3. How many garbage bags of household waste do you put out each week?</p>
+    <input type="number" id="garbageBags" name="garbageBags">
+
+    <p>4. About what percentage of your household waste is food scraps and yard waste?</p>
+    <input type="range" id="foodWastePercent" name="foodWastePercent" min="0" max="100">
+
+    <p>5. Do you actively recycle materials like paper, plastic, glass, and metals?</p>
+    <select id="recyclingHabits" name="recyclingHabits">
+      <option value="none">No recycling</option>
+      <option value="some">Some recycling</option>
+      <option value="active">Active recycling</option>
+    </select>
+
+    <!-- Rest of form -->
+    <br><br>
+
+    <button type="button" onclick="calculateFootprint()">Calculate</button>
     </form>
 
     <h2>Waste-Related Carbon Footprint: <span id="result">N/A</span> kg CO2e/year</h2>
