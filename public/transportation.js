@@ -1,6 +1,7 @@
 
 let numberOfVehicles = 0;
- let transportationEmissionValues=[];
+let transportationEmissionValues = [];
+
 document.getElementById('add-vehicle-button').addEventListener('click', function () {
     numberOfVehicles++;
     const vehicleDiv = document.createElement('div');
@@ -39,6 +40,18 @@ document.getElementById('add-vehicle-button').addEventListener('click', function
     mileageRadios.forEach(radio => {
         radio.addEventListener('change', () => showMileageInput(numberOfVehicles));
     });
+});
+
+document.getElementById('remove-vehicle-button').addEventListener('click', function () {
+    if (numberOfVehicles > 0) {
+        const lastVehicle = document.querySelector('.vehicle:last-child');
+        lastVehicle.parentNode.removeChild(lastVehicle);
+        numberOfVehicles--;
+
+        if (numberOfVehicles === 0) {
+            document.getElementById('calculate-button').style.display = 'none';
+        }
+    }
 });
 
 document.getElementById('calculate-button').addEventListener('click', function () {
@@ -86,7 +99,6 @@ document.getElementById('calculate-button').addEventListener('click', function (
     document.querySelector('input[name="total-co2-emissions"]').value = totalEmissions.toFixed(2);
 });
 
-
 function showMileageInput(vehicleNumber) {
     const mileageType = document.querySelector(`input[name="mileage-${vehicleNumber}"]:checked`).value;
     if (mileageType === 'week') {
@@ -98,7 +110,6 @@ function showMileageInput(vehicleNumber) {
     }
 }
 
-
 document.getElementById("electricity-button").addEventListener("click", function() {
     // Redirect to the electricity.html file
     window.location.href = "electricity.html";
@@ -108,14 +119,13 @@ document.getElementById("natural-gas-button").addEventListener("click", function
     // Redirect to the naturalgas.html file
     window.location.href = "natural_gas.html";
 });
+
 document.getElementById("pie-chart").addEventListener("click", function() {
     // Redirect to the HTML page where you want to display the pie chart
     window.location.href = `pie_chart.html?totalEmission=${JSON.stringify(transportationEmissionValues)}`;
 });
+
 document.getElementById("waste-button").addEventListener("click", function() {
     // Redirect to the naturalgas.html file
     window.location.href = "waste.html";
 });
-
-
-
