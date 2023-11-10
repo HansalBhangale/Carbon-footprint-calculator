@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color:#b3d9b3;
     margin: 0;
-    padding: 0;
+    padding: 20;
 }
 .container {
     max-width: 600px;
@@ -18,11 +18,15 @@ h1 {
 }
 .input-type {
     text-align: center;
+    margin-bottom: 20px;
+}
+#dollars-input div, #kwh-input div {
+    margin-bottom: 20px;
 }
 #dollars-input, #kwh-input {
     display: none;
+    margin-bottom: 20px;
 }
-
 button {
     background-color: #007BFF;
     color: #fff;
@@ -30,4 +34,5 @@ button {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    margin-bottom: 20px;
 }

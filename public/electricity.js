@@ -56,4 +56,3 @@ document.getElementById("waste-button").addEventListener("click", function() {
     // Redirect to the naturalgas.html file
     window.location.href = "waste.html";
 });
-
